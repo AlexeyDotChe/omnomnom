@@ -1,5 +1,10 @@
 Omnomnom::Application.routes.draw do
-  get "pages/home"
+  
+  get 'about' => 'pages#about'
+
+  root :to => 'pages#home'
+
+  # get "pages/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -8,7 +13,7 @@ Omnomnom::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
-  # Sample of named route:
+  # Sample of named route: 
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
