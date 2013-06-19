@@ -5,6 +5,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
 gem 'country_select'
+gem "paperclip", "~> 3.0"
+gem "cocaine"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
