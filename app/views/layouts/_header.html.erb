@@ -23,11 +23,11 @@
                     <ul class="nav pull-right">
 
                     	<% if user_signed_in? %>
-                            <li><%= link_to 'New Pin', new_pin_path %></li>
-                  		  	<li><%= link_to 'Edit Profile',  edit_user_registration_path %></li>
-                        	<li><%= link_to 'Log Out',  destroy_user_session_path, method: :delete %></li>
+                            <li><%= link_to 'Добавить картинку', new_pin_path %></li>
+                  		  	<li><%= link_to 'Профиль',  edit_user_registration_path %></li>
+                        	<li><%= link_to 'Выйти',  destroy_user_session_path, method: :delete %></li>
                         <% else %>
-                       		<li><%= link_to 'Log In',  new_user_session_path %></li>
+                       		<li><%= link_to 'Войти',  new_user_session_path %></li>
                     	<% end %>
                     </ul>
                 </div>
