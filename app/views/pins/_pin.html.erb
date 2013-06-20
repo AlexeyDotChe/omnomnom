@@ -1,7 +1,10 @@
-    <tr>
-        <td><%= image_tag pin.image(:medium) %></td>
-        <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
-    </tr>
+<div class="box">
+	<%= link_to (image_tag pin.image(:medium)), pin  %><br>
+        <p class="description"><%= pin.description %></p>
+        <p><strong>Загруженно <%= pin.user.name %>
+        <p><small>
+     <% if current_user == pin.user %>
+        <%= link_to 'Edit', edit_pin_path(pin) %>
+        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Вы уверены?' } %>
+    <% end %></small></p>
+</div><br>
